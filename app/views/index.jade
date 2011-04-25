@@ -1,0 +1,25 @@
+.home(style="display: none")
+  h1.column.span_6.prepend_2.center.prepend_top_3 pl.us
+  
+  h3.column.span_6.prepend_2.center.prepend_top_1
+    | It's like 
+    a(href="http://min.us") min.us
+    | , but not quite.
+  
+  h4.column.span_6.prepend_2.center.prepend_top_1.quiet To create a new gallery, drag files here
+
+  div.column.span_6.prepend_2.prepend_top_1.center#file-uploader-target
+
+  h5.column.span_10.prepend_top_3.quiet Latest Galleries
+
+  div.column.span_10.prepend_top_1#gallery_container
+
+.gallery-view
+
+.image-view
+
+script
+  var uploader = new qq.FileUploader({
+      element: $('#file-uploader-target')[0],
+      action: '/galleries/new/images'
+  });

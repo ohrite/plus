@@ -1,0 +1,281 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+  margin 0
+  padding 0
+  border 0
+  font-size 100%
+  font inherit
+  vertical-align baseline
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+  display block
+
+html
+  font-size 100.01%
+
+body
+  font-size 87.5%
+  color #222
+  background #fff
+  font-family "Helvetica Neue", Arial, Helvetica, sans-serif
+
+ol, ul 
+  list-style none
+
+blockquote, q 
+  quotes none
+  color #666
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+  content ''
+  content none
+
+table 
+  border-collapse collapse
+  border-spacing 0
+
+a
+  color #00B7FF
+  text-decoration underline
+  
+  &:hover, &:focus
+    color #f90
+
+h1, h2, h3, h4, h5, h6
+  font-weight normal
+  color #111
+
+h1
+  font-size 2.5em
+
+h2
+  font-size 2em
+
+h3
+  font-size 1.5em
+
+h4
+  font-size 1.25em
+
+h5
+  font-size 1em
+  font-weight bold
+
+h6
+  font-size 1em
+
+.column
+  float left
+  margin-right 10px
+  overflow hidden
+  display inline
+  
+  &.last
+    margin-right 0
+    
+  &.span_1
+    width 60px
+  &.span_2
+    width 140px
+  &.span_3
+    width 220px
+  &.span_4
+    width 300px
+  &.span_5
+    width 380px
+  &.span_6
+    width 460px
+  &.span_7
+    width 540px
+  &.span_8
+    width 620px
+  &.span_9
+    width 700px
+  &.span_10
+    width 780px
+
+  &.prepend_1
+    margin-left 70px
+  &.prepend_2
+    margin-left 130px
+  &.prepend_3
+    margin-left 200px
+  &.prepend_4
+    margin-left 270px
+    
+  &.prepend_top_1
+    margin-top 20px
+  &.prepend_top_2
+    margin-top 40px
+  &.prepend_top_3
+    margin-top 60px
+  &.prepend_top_4
+    margin-top 80px
+
+.row, section, header
+  width 780px
+  margin 0 auto
+  overflow hidden
+
+.center
+  text-align center
+
+.ellipsis
+  overflow-x hidden
+  text-overflow ellipsis
+
+.quiet
+  color #999
+
+header
+  border 1px solid #f8f8f8
+  border-top-width 0
+  border-radius 0 0 0.5em 0.5em
+  text-align right
+  margin-bottom 1em
+  
+  a
+    text-decoration none
+  
+  li
+    display inline-block
+    padding 0.5em 2em
+
+.image-view
+  img
+    max-width 780px
+
+.gallery-item
+  width 140px
+  height 120px
+  float left
+  margin 0 10px
+  overflow hidden
+  display inline-block
+  border 1px solid #f0f0f0
+  text-align center
+  position relative
+  text-decoration none
+
+  &:hover span
+    opacity 0.8
+
+  div
+    display table
+    overflow hidden
+    width 100%
+    height 100%
+    
+    div
+      display table-cell
+      vertical-align middle
+      text-align center
+      
+      img
+        margin 0 auto 0 auto
+        max-width 160px
+    
+  span
+    position absolute
+    bottom 0
+    display block
+    background #111
+    opacity 0.6
+    color white
+    width 100%
+    overflow-x hidden
+    padding 0.1em 0
+    -webkit-transition opacity 0.2s
+
+h2 input, h5 input
+  border 0 none
+  background transparent
+  padding 0
+  margin 0
+  font-size 1em
+  outline 0 none
+
+.gallery-view, .gallery-images
+  width 780px
+  margin 0 auto
+  overflow hidden
+
+.qq-uploader
+  position relative
+  width 100%
+
+.qq-upload-button
+  display inline-block
+  width 105px
+  padding 7px 0
+  text-align center    
+  background #880000
+  border-bottom 1px solid #ddd
+  color #fff
+
+.qq-upload-button-hover 
+  background #cc0000
+  
+.qq-upload-button-focus
+  outline 1px dotted black
+
+.qq-upload-drop-area
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  min-height 70px
+  z-index 2
+  background #FF9797
+  text-align center
+
+.qq-upload-drop-area span 
+  display block
+  position absolute
+  top 50%
+  width 100%
+  margin-top -8px
+  font-size 16px
+
+.qq-upload-drop-area-active 
+  background #FF7171
+
+.qq-upload-list 
+  margin 15px 35px
+
+  li
+    line-height 15px
+    font-size 12px
+
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text 
+  margin-right 7px
+
+.qq-upload-spinner 
+  display inline-block
+  background url("/images/loading.gif")
+  width 15px
+  height 15px
+  vertical-align text-bottom
+
+.qq-upload-size, .qq-upload-cancel 
+  font-size 11px
+
+.qq-upload-failed-text 
+  display none
+
+.qq-upload-fail .qq-upload-failed-text 
+  display inline

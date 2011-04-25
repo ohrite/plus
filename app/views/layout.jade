@@ -1,0 +1,55 @@
+!!! 5
+html
+  head
+    title pl.us
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    script(src='javascripts/lib/modernizr.js')
+    script(src='javascripts/lib/jquery.js')
+    script(src='javascripts/lib/json.js')
+    script(src='javascripts/lib/underscore.js')
+    script(src='javascripts/lib/backbone.js')
+    script(src='javascripts/lib/fileuploader.js')
+    script(src='javascripts/lib/prettydate.js')
+  body
+    header
+      nav
+        ul
+          li 
+            a(href='#') Home
+          li 
+            a(href='#about') About
+          li 
+            a(href='mailto:ritezel+plus@gmail.com') Contact
+    section#wrapper!= body
+
+    script#image-view(type="text/html")
+      | <h2 class="column span_6"><input class="column span_6" value="<%= get('name') %>" /></h2>
+      | <h6 class="column span_6 quiet">Uploaded <%= prettydate(new Date(get('created'))) %></h6>
+      | <img class="column span_10 prepend_top_1" src="<%= get('path') %>" alt="<%= get('name') %>" />
+
+    script#gallery-image-item(type="text/html")
+      | <a class="gallery-item prepend_top_1" href="#gallery/<%= get('gallery') %>/image/<%= id %>">
+      |   <div><div>
+      |     <img src="<%= get('path') || '/images/loading.gif' %>" alt="<%= get('name') %>" />
+      |   </div></div>
+      |   <span><%= get('name') %></span>
+      | </a>
+
+    script#gallery-view(type="text/html")
+      | <h2 class="column span_6"><input class="column span_6" value="<%= get('name') %>" /></h2>
+      | <div class="upload-area column span_4 last"></div>
+      | <h6 class="column span_6 quiet">Created <%= prettydate(new Date(get('created'))) %></h6>
+      | <h5 class="column span_6 prepend_top_1 quiet"><input class="column span_6" value="<%= get('description') %>" placeholder="Add a description" /></h5>
+      | <div class="gallery-images column span_10 last prepend_top_2"></div>
+    
+    script#featured-gallery-item(type='text/html')
+      | <a class="featured-gallery-item gallery-item prepend_top_1" href="#gallery/<%= id %>">
+      |   <div><div>
+      |     <img src="<%= get('images').length > 0 ? get('images').pluck('path')[0] : '/images/loading.gif' %>" alt="<%= get('name') %>" />
+      |   </div></div>
+      |   <span><%= get('name') %></span>
+      | </a>
+    
+    script(src='javascripts/application.js')
+    
